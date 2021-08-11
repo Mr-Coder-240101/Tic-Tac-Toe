@@ -43,7 +43,7 @@ io.on("connection", (socket) => {
             });
             waitingPlayer = null;
         }
-        console.log(waitingPlayer);
+        console.log(details.name);
     });
 
     socket.on("move", (move) => {
@@ -58,15 +58,14 @@ io.on("connection", (socket) => {
         } else {
             socket.broadcast.emit("delete", socket.id);
         }
-        console.log(waitingPlayer);
     });
 });
 
 // To Call Self API
 const callingSelfAPI = async () => {
     try {
-        const response = await got("https://nerds-together.glitch.me/");
-        console.log(response.body);
+        await got("https://coder-tic-tac-toe.glitch.me/");
+        console.log("Called Self API");
     } catch (error) {
         console.log(error);
     }

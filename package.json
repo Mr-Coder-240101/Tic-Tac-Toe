@@ -4,14 +4,10 @@
   "description": "Tic Tac Toe Where You Can Play Against Computer As Well As Any Player All Over World",
   "main": "server.js",
   "scripts": {
-    "start": "npm run server",
-    "server": "nodemon server"
+    "start": "node server.js"
   },
   "author": "Jay Rathod",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.12"
-  },
   "dependencies": {
     "express": "^4.17.1",
     "got": "^11.8.2",

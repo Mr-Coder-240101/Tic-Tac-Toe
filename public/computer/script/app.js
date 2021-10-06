@@ -537,7 +537,7 @@ class Utility {
 		if (option == "X") {
 			game.playerScore++;
 			game.ui.playerScoreElement.innerText = game.playerScore;
-			localStorage.setItem("playerScore", game.playerScore);
+			localStorage.setItem("playerScoreAgainstMrCoder", game.playerScore);
 		} else {
 			game.mrCoderScore++;
 			game.ui.mrCoderScoreElement.innerText = game.mrCoderScore;
@@ -621,11 +621,11 @@ function contentLoadedListener(event) {
 		myGame.utility.showAlert(myGame, message);
 	}
 
-	if (localStorage.getItem("playerScore") == null) {
+	if (localStorage.getItem("playerScoreAgainstMrCoder") == null) {
 		myGame.playerScore = 0;
-		localStorage.setItem("playerScore", myGame.playerScore);
+		localStorage.setItem("playerScoreAgainstMrCoder", myGame.playerScore);
 	} else {
-		myGame.playerScore = localStorage.getItem("playerScore");
+		myGame.playerScore = localStorage.getItem("playerScoreAgainstMrCoder");
 		myGame.ui.playerScoreElement.innerText = myGame.playerScore;
 	}
 
